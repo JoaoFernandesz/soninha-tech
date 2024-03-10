@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lanchonete - Sistema de Compras</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 300px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        label, input, button { display: block; width: 100%; margin-bottom: 10px; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Ponto de Venda : Sonia Tech</h2>
+    <form action="/" method="post">
+        <label for="nome">Insira seu Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <h2>Ou</h2>
+
+        <label for="telefone">Insira seu Telefone:</label>
+        <input type="text" id="telefone" name="telefone">
+
+        <button type="submit" id="makePurchase">Fazer Compra</button>
+    </form>
+    {{mensagem}}
+</div>
+
+</body>
+</html>

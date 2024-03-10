@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <style>
+        .produto { margin: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .produto h3, .produto p { margin: 0; }
+        .produto img { width: 100px; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Produtos</h1>
+
+<div id="listaProdutos">
+    {% for produto in produtos %}
+    <div class="produto">
+        <h3>{{ produto.nome }}</h3>
+        <img src="{{ url_for('static', filename=produto.imagem) }}" alt="{{ produto.nome }}">
+        <p>Preço: R$ {{ produto.valor }}</p>
+        <form action="/adicionar_carrinho" method="post">
+            <input type="hidden" name="produto_id" value="{{ produto.id }}">
+            <label for="quantidade_{{ produto.id }}">Quantidade:</label>
+            <input type="number" id="quantidade_{{ produto.id }}" name="quantidade" value="1" min="1">
+            <button type="submit">Adicionar ao Carrinho</button>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+
+<a href="/finalizar_compra"><button>Finalizar Compra</button></a>
+
+</body>
+</html>

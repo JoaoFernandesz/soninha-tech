@@ -1,0 +1,6 @@
+[
+    {"id": 1, "nome": "Hambúrguer", "imagem": "hamburguer.jpg", "valor": 22.90},
+    {"id": 2, "nome": "Coxinha", "imagem": "coxinha.jpg", "valor": 5.50},
+    {"id": 3, "nome": "Refrigerante", "imagem": "refrigerante.jpg", "valor": 4.00},
+    {"id": 4, "nome": "Suco Natural", "imagem": "suco-natural.jpg", "valor": 7.00}
+]

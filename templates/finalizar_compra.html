@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra</title>
+</head>
+<body>
+    <h1>Finalizar Compra</h1>
+
+    <div id="carrinho">
+        {% for item in carrinho %}
+            <!-- Aqui, você precisa recuperar os detalhes do produto pelo ID para mostrar -->
+            <div>
+                <p>Produto ID: {{ item.produto_id }} - Quantidade: {{ item.quantidade }}</p>
+            </div>
+        {% endfor %}
+        <p>Total: R$ {{ total }}</p>
+    </div>
+    <a href="/checkout"><button>Concluir Compra</button></a>
+</body>
+</html>
